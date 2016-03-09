@@ -11,9 +11,6 @@ use Illuminate\Database\Migrations\Migration;
  */
 class CreateWatchlistsTable extends Migration
 {
-    /**
-     *
-     */
     public function up()
     {
         Schema::create('watchlists', function (Blueprint $table) {
@@ -34,9 +31,6 @@ class CreateWatchlistsTable extends Migration
         });
     }
 
-    /**
-     *
-     */
     public function down()
     {
         Schema::drop('watchlists');

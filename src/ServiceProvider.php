@@ -35,7 +35,7 @@ class ServiceProvider extends \DraperStudio\ServiceProvider\ServiceProvider
     {
         return array_merge(parent::provides(), ['cookie-consent']);
     }
-    
+
     /**
      * Get the default package name.
      *
