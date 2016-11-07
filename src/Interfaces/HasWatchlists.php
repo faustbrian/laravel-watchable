@@ -1,8 +1,8 @@
 <?php
 
-namespace BrianFaust\Watchable\Contracts;
+namespace BrianFaust\Watchable\Interfaces;
 
-interface Watchable
+interface HasWatchlists
 {
     public function watchlists();
 

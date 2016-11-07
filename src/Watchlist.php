@@ -1,6 +1,6 @@
 <?php
 
-namespace BrianFaust\Watchable\Models;
+namespace BrianFaust\Watchable;
 
 use Cviebrock\EloquentSluggable\SluggableInterface as Sluggable;
 use Cviebrock\EloquentSluggable\SluggableTrait;

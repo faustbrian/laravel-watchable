@@ -1,6 +1,6 @@
 <?php
 
-namespace BrianFaust\Watchable\Models;
+namespace BrianFaust\Watchable;
 
 use Illuminate\Database\Eloquent\Model;
 

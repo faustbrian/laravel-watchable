@@ -2,9 +2,9 @@
 
 namespace BrianFaust\Watchable\Traits;
 
-use BrianFaust\Watchable\Models\Watchlist;
+use BrianFaust\Watchable\Watchlist;
 
-trait Watchable
+trait HasWatchlistsTrait
 {
     public function watchlists()
     {

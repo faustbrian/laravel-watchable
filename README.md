@@ -30,13 +30,13 @@ php artisan vendor:publish --provider="BrianFaust\Watchable\ServiceProvider" && 
 
 namespace App;
 
-use BrianFaust\Watchable\Contracts\Watchable;
-use BrianFaust\Watchable\Traits\Watchable as WatchableTrait;
+use BrianFaust\Watchable\HasWatchlistsTrait;
+use BrianFaust\Watchable\Interfaces\HasWatchlists;
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model implements Watchable
+class User extends Model implements HasWatchlists
 {
-    use WatchableTrait;
+    use HasWatchlistsTrait;
 }
 
 ```

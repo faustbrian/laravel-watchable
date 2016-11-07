@@ -2,7 +2,9 @@
 
 namespace BrianFaust\Watchable;
 
-class ServiceProvider extends \BrianFaust\ServiceProvider\ServiceProvider
+use BrianFaust\ServiceProvider\ServiceProvider;
+
+class WatchableServiceProvider extends ServiceProvider
 {
     public function boot()
     {
