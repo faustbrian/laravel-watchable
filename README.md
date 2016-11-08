@@ -18,7 +18,7 @@ And then include the service provider within `app/config/app.php`.
 
 At last you need to publish and run the migration.
 ```
-php artisan vendor:publish --provider="BrianFaust\Watchable\ServiceProvider" && php artisan migrate
+php artisan vendor:publish --provider="BrianFaust\Watchable\WatchableServiceProvider" && php artisan migrate
 ```
 
 ## Usage
