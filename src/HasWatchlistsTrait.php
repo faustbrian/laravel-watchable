@@ -1,6 +1,6 @@
 <?php
 
-namespace BrianFaust\Watchable\Traits;
+namespace BrianFaust\Watchable;
 
 use BrianFaust\Watchable\Watchlist;
 
