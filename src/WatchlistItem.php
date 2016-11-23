@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of Laravel Watchable.
+ *
+ * (c) Brian Faust <hello@brianfaust.de>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace BrianFaust\Watchable;
 
 use Illuminate\Database\Eloquent\Model;
@@ -23,7 +32,7 @@ class WatchlistItem extends Model
             'watchable_type' => get_class($watchable),
         ];
 
-        if (!$item = static::where($data)->first()) {
+        if (! $item = static::where($data)->first()) {
             $item = new static(array_except($data, ['watchlist_id']));
 
             $watchlist->items()->save($item);
@@ -40,7 +49,7 @@ class WatchlistItem extends Model
             'watchable_type' => get_class($watchable),
         ];
 
-        if (!$item = static::where($data)->first()) {
+        if (! $item = static::where($data)->first()) {
             return false;
         }
 
