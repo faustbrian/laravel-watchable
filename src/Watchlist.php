@@ -21,7 +21,7 @@ class Watchlist extends Model implements Sluggable
 
     protected $sluggable = [
         'build_from' => 'title',
-        'save_to' => 'slug',
+        'save_to'    => 'slug',
     ];
 
     protected $guarded = ['id', 'created_at', 'updated_at'];
