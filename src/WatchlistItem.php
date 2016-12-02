@@ -27,12 +27,12 @@ class WatchlistItem extends Model
     public function addItem(Model $watchlist, Model $watchable)
     {
         $data = [
-            'watchlist_id' => $watchlist->id,
-            'watchable_id' => $watchable->id,
+            'watchlist_id'   => $watchlist->id,
+            'watchable_id'   => $watchable->id,
             'watchable_type' => get_class($watchable),
         ];
 
-        if (! $item = static::where($data)->first()) {
+        if (!$item = static::where($data)->first()) {
             $item = new static(array_except($data, ['watchlist_id']));
 
             $watchlist->items()->save($item);
@@ -44,12 +44,12 @@ class WatchlistItem extends Model
     public function removeItem(Model $watchlist, Model $watchable)
     {
         $data = [
-            'watchlist_id' => $watchlist->id,
-            'watchable_id' => $watchable->id,
+            'watchlist_id'   => $watchlist->id,
+            'watchable_id'   => $watchable->id,
             'watchable_type' => get_class($watchable),
         ];
 
-        if (! $item = static::where($data)->first()) {
+        if (!$item = static::where($data)->first()) {
             return false;
         }
 
