@@ -11,9 +11,7 @@ $ composer require faustbrian/laravel-watchable
 And then include the service provider within `app/config/app.php`.
 
 ``` php
-'providers' => [
-    BrianFaust\Watchable\WatchableServiceProvider::class
-];
+BrianFaust\Watchable\WatchableServiceProvider::class
 ```
 
 At last you need to publish and run the migration.
