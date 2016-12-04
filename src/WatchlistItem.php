@@ -30,12 +30,12 @@ class WatchlistItem extends Model
 
     protected $with = ['watchable'];
 
-    public function watchable()
+    public function watchable(): MorphTo
     {
         return $this->morphTo();
     }
 
-    public function addItem(Model $watchlist, Model $watchable)
+    public function addItem(Model $watchlist, Model $watchable): self
     {
         $data = [
             'watchlist_id'   => $watchlist->id,
@@ -52,7 +52,7 @@ class WatchlistItem extends Model
         return $item;
     }
 
-    public function removeItem(Model $watchlist, Model $watchable)
+    public function removeItem(Model $watchlist, Model $watchable): bool
     {
         $data = [
             'watchlist_id'   => $watchlist->id,
@@ -64,6 +64,6 @@ class WatchlistItem extends Model
             return false;
         }
 
-        return $item->delete();
+        return (bool) $item->delete();
     }
 }

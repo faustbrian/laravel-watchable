@@ -22,38 +22,48 @@ declare(strict_types=1);
 
 namespace BrianFaust\Watchable;
 
-use Cviebrock\EloquentSluggable\SluggableInterface as Sluggable;
-use Cviebrock\EloquentSluggable\SluggableTrait;
+use Spatie\Sluggable\HasSlug;
+use Spatie\Sluggable\SlugOptions;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 
-class Watchlist extends Model implements Sluggable
+class Watchlist extends Model
 {
-    use SluggableTrait;
-
-    protected $sluggable = [
-        'build_from' => 'title',
-        'save_to'    => 'slug',
-    ];
+    use HasSlug;
 
     protected $guarded = ['id', 'created_at', 'updated_at'];
 
-    public function items()
+    public function items(): HasMany
     {
         return $this->hasMany(WatchlistItem::class);
     }
 
-    public function addItem(Model $model)
+    public function addItem(Model $model): WatchlistItem
     {
         return (new WatchlistItem())->addItem($this, $model);
     }
 
-    public function removeItem(Model $model)
+    public function removeItem(Model $model): bool
     {
         return (new WatchlistItem())->removeItem($this, $model);
     }
 
-    public function author()
+    public function author(): MorphTo
     {
         return $this->morphTo('author');
+    }
+
+    /**
+     * Get the options for generating the slug.
+     */
+    public function getSlugOptions() : SlugOptions
+    {
+        return SlugOptions::create()
+            ->generateSlugsFrom('title')
+            ->saveSlugsTo('slug');
     }
 }
