@@ -22,7 +22,7 @@ declare(strict_types=1);
 
 namespace BrianFaust\Watchable;
 
-trait HasWatchlistsTrait
+trait HasWatchlists
 {
     public function watchlists()
     {
