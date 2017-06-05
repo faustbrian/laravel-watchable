@@ -10,13 +10,8 @@ Require this package, with [Composer](https://getcomposer.org/), in the root dir
 $ composer require faustbrian/laravel-watchable
 ```
 
-And then include the service provider within `app/config/app.php`.
-
-``` php
-BrianFaust\Watchable\WatchableServiceProvider::class
-```
-
 At last you need to publish and run the migration.
+
 ```
 php artisan vendor:publish --provider="BrianFaust\Watchable\WatchableServiceProvider" && php artisan migrate
 ```
@@ -57,19 +52,11 @@ $watchlist->addItem(Post::first());
 $watchlist->removeItem(Post::first());
 ```
 
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
 ## Testing
 
 ``` bash
 $ phpunit
 ```
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security
 
