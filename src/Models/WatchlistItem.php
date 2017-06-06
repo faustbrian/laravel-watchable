@@ -27,8 +27,8 @@ class WatchlistItem extends Model
     public function addItem(Model $watchlist, Model $watchable): self
     {
         $data = [
-            'watchlist_id' => $watchlist->id,
-            'watchable_id' => $watchable->id,
+            'watchlist_id'   => $watchlist->id,
+            'watchable_id'   => $watchable->id,
             'watchable_type' => get_class($watchable),
         ];
 
@@ -44,8 +44,8 @@ class WatchlistItem extends Model
     public function removeItem(Model $watchlist, Model $watchable): bool
     {
         $data = [
-            'watchlist_id' => $watchlist->id,
-            'watchable_id' => $watchable->id,
+            'watchlist_id'   => $watchlist->id,
+            'watchable_id'   => $watchable->id,
             'watchable_type' => get_class($watchable),
         ];
 
