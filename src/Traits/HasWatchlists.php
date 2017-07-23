@@ -11,9 +11,9 @@
 
 namespace BrianFaust\Watchable\Traits;
 
+use Illuminate\Support\Collection;
 use BrianFaust\Watchable\Models\Watchlist;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
-use Illuminate\Support\Collection;
 
 trait HasWatchlists
 {
