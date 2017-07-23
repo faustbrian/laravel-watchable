@@ -32,7 +32,7 @@ class WatchlistItem extends Model
             'watchable_type' => get_class($watchable),
         ];
 
-        if (!$item = static::where($data)->first()) {
+        if (! $item = static::where($data)->first()) {
             $item = new static(array_except($data, ['watchlist_id']));
 
             $watchlist->items()->save($item);
@@ -49,7 +49,7 @@ class WatchlistItem extends Model
             'watchable_type' => get_class($watchable),
         ];
 
-        if (!$item = static::where($data)->first()) {
+        if (! $item = static::where($data)->first()) {
             return false;
         }
 
