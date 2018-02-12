@@ -13,11 +13,11 @@ declare(strict_types=1);
 
 namespace BrianFaust\Watchable\Models;
 
-use Spatie\Sluggable\HasSlug;
-use Spatie\Sluggable\SlugOptions;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Spatie\Sluggable\HasSlug;
+use Spatie\Sluggable\SlugOptions;
 
 class Watchlist extends Model
 {
