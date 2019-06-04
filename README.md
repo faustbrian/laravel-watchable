@@ -1,22 +1,22 @@
 # Laravel Watchable
 
-[![Build Status](https://img.shields.io/travis/faustbrian/Laravel-watchable/master.svg?style=flat-square)](https://travis-ci.org/faustbrian/Laravel-watchable)
-[![PHP from Packagist](https://img.shields.io/packagist/php-v/faustbrian/laravel-watchable.svg?style=flat-square)]()
-[![Latest Version](https://img.shields.io/github/release/faustbrian/Laravel-watchable.svg?style=flat-square)](https://github.com/faustbrian/Laravel-watchable/releases)
-[![License](https://img.shields.io/packagist/l/faustbrian/Laravel-watchable.svg?style=flat-square)](https://packagist.org/packages/faustbrian/Laravel-watchable)
+[![Build Status](https://img.shields.io/travis/artisanry/watchable/master.svg?style=flat-square)](https://travis-ci.org/artisanry/watchable)
+[![PHP from Packagist](https://img.shields.io/packagist/php-v/artisanry/watchable.svg?style=flat-square)]()
+[![Latest Version](https://img.shields.io/github/release/artisanry/watchable.svg?style=flat-square)](https://github.com/artisanry/watchable/releases)
+[![License](https://img.shields.io/packagist/l/artisanry/watchable.svg?style=flat-square)](https://packagist.org/packages/artisanry/watchable)
 
 ## Installation
 
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ``` bash
-$ composer require faustbrian/laravel-watchable
+$ composer require artisanry/watchable
 ```
 
 At last you need to publish and run the migration.
 
 ```
-php artisan vendor:publish --provider="BrianFaust\Watchable\WatchableServiceProvider" && php artisan migrate
+php artisan vendor:publish --provider="Artisanry\Watchable\WatchableServiceProvider" && php artisan migrate
 ```
 
 ## Usage
@@ -27,7 +27,7 @@ php artisan vendor:publish --provider="BrianFaust\Watchable\WatchableServiceProv
 
 namespace App;
 
-use BrianFaust\Watchable\HasWatchlists;
+use Artisanry\Watchable\HasWatchlists;
 use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
@@ -63,7 +63,7 @@ $ phpunit
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to hello@brianfaust.me. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to hello@basecode.sh. All security vulnerabilities will be promptly addressed.
 
 ## Credits
 
@@ -72,4 +72,4 @@ If you discover a security vulnerability within this package, please send an e-m
 
 ## License
 
-[MIT](LICENSE) © [Brian Faust](https://brianfaust.me)
+[MIT](LICENSE) © [Brian Faust](https://basecode.sh)

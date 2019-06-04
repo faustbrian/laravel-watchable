@@ -1,12 +1,12 @@
 {
-    "name": "faustbrian/laravel-watchable",
+    "name": "artisanry/watchable",
     "description": "Watchable Polymorphic Eloquent Models for Laravel 5",
-    "keywords": ["laravel", "framework", "Laravel-watchable", "Laravel Watchable", "Brian Faust", "faustbrian"],
+    "keywords": ["laravel", "framework", "Laravel-watchable", "Laravel Watchable"],
     "license": "MIT",
     "authors": [{
         "name": "Brian Faust",
-        "email": "hello@brianfaust.me",
-        "homepage": "https://brianfaust.me"
+        "email": "hello@basecode.sh",
+        "homepage": "https://basecode.sh"
     }],
     "require": {
         "php": "^7.1",
@@ -21,12 +21,12 @@
     },
     "autoload": {
         "psr-4": {
-            "BrianFaust\\Watchable\\": "src/"
+            "Artisanry\\Watchable\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BrianFaust\\Tests\\Watchable\\": "tests"
+            "Artisanry\\Tests\\Watchable\\": "tests"
         }
     },
     "config": {
@@ -39,7 +39,7 @@
         },
         "laravel": {
             "providers": [
-                "BrianFaust\\Watchable\\WatchableServiceProvider"
+                "Artisanry\\Watchable\\WatchableServiceProvider"
             ]
         }
     },
