@@ -7,7 +7,7 @@
         "Laravel-watchable",
         "Laravel Watchable"
     ],
-    "license": "MIT",
+    "license": "MPL-2.0",
     "authors": [
         {
             "name": "Brian Faust",
